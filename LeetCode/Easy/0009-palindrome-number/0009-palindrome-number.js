@@ -8,8 +8,7 @@ var isPalindrome = function(x) {
     while(newX > 0) {
         y = y*10 + newX%10;
         newX = Math.floor(newX/10)
-
     }
 
-    return y === x ? true : false;
+    return y === x;
 };
