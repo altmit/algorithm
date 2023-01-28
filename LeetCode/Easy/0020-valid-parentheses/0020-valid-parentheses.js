@@ -13,7 +13,7 @@ var isValid = function(s) {
     while(s.length > 0) {
         let bracket = s.shift();
         if(stack.length === 0) {
-            console.log(1);
+    
             stack.push(bracket);
             continue;
         }
