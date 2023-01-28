@@ -18,7 +18,6 @@ var isValid = function(s) {
             continue;
         }
         if(bracket in obj) {
-            console.log(2);
             stack.push(bracket);
             continue ;
         }
