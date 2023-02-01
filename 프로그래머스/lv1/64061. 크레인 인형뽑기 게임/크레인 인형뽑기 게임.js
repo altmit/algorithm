@@ -1,21 +1,18 @@
 function solution(board, moves) {
     let stack = [];
     let count = 0;
-    moves.forEach((m_i) => {
-        let current = 0;
-        while(board.length > current) {
-            if(board[current][m_i-1] !== 0) {
-                if(stack[stack.length-1] === board[current][m_i-1]) {
-                    board[current][m_i-1] = 0;
+    moves.map(e => e-1).forEach((e) => {
+        for(let i=0; i<board.length; i++) {
+            if(board[i][e] !== 0) {
+                if(stack[stack.length-1] === board[i][e]){
                     stack.pop();
-                    count+=2;
-                    break;
+                    count += 2;
+                } else {
+                    stack.push(board[i][e])
                 }
-                stack.push(board[current][m_i-1])
-                board[current][m_i-1] = 0;
-                break ;
+                board[i][e] = 0;
+                break;
             }
-            current ++
         }
     })
     return count;
