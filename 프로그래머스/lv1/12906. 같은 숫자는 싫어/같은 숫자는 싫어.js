@@ -1,11 +1,8 @@
 function solution(arr)
 {
-    var answer = [];
-    arr.map((a,i) =>{
-        if(a !== arr[i+1]){
-            answer.push(a);
-        }
-    })
+    var answer = answer = arr.filter((e,i) => e !==arr[i+1])
+    
+    
     
     return answer;
 }
