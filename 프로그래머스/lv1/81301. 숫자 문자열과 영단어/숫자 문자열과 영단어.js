@@ -13,7 +13,7 @@ function solution(s) {
         "nine"
     ]
 
-    arr.map((x,i) => s=s.replaceAll(x,i));
+    arr.forEach((x,i) => s=s.replaceAll(x,i));
 
     
     return Number(s);
