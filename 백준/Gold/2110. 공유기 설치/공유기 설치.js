@@ -19,9 +19,10 @@ function solve(arr, C) {
     let pre = arr[0];
 
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] - pre < mid) continue;
-      cnt += 1;
-      pre = arr[i];
+      if (arr[i] - pre >= mid) {
+        cnt += 1;
+        pre = arr[i];
+      }
     }
 
     if (cnt < C) {
